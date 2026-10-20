@@ -31,9 +31,9 @@ async function bootstrap() {
 
   // Swagger Documentation Setup
   const config = new DocumentBuilder()
-    .setTitle('Professional Blog REST API')
+    .setTitle('Blog REST API')
     .setDescription(
-      'Enterprise-ready REST API featuring robust Authentication, Authorization, Gmail OTP verification, RBAC, and Cloudinary media uploads.',
+      'REST API featuring robust Authentication, Authorization, Gmail OTP verification, and Cloudinary media uploads.',
     )
     .setVersion('1.0')
     .addBearerAuth()
