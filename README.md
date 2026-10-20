@@ -1,4 +1,4 @@
-# 🚀 Enterprise Blog REST API (NestJS + MongoDB)
+# 🚀 Blog REST API (NestJS + MongoDB)
 
 A production-grade, secure, and scalable RESTful API for a modern blogging platform built with **NestJS**, **MongoDB (Mongoose)**, **Passport JWT**, **Nodemailer (Gmail SMTP)**, and **Cloudinary**.
 
