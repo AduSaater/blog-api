@@ -5,11 +5,28 @@ import { OtpPurpose } from 'src/auth/enums/otp-purpose.enum';
 
 @Schema({
   timestamps: true,
+  versionKey: false,
   toJSON: {
     transform: (doc, ret: Record<string, any>) => {
       delete ret.password;
       delete ret.otp;
+      delete ret.otpExpires;
+      delete ret.otpPurpose;
+      delete ret.lastOtpSentAt;
       delete ret.refreshToken;
+      delete ret.__v;
+      return ret;
+    },
+  },
+  toObject: {
+    transform: (doc, ret: Record<string, any>) => {
+      delete ret.password;
+      delete ret.otp;
+      delete ret.otpExpires;
+      delete ret.otpPurpose;
+      delete ret.lastOtpSentAt;
+      delete ret.refreshToken;
+      delete ret.__v;
       return ret;
     },
   },

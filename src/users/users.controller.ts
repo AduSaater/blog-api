@@ -17,6 +17,7 @@ import {
   ApiBearerAuth,
   ApiBody,
   ApiConsumes,
+  ApiExcludeEndpoint,
   ApiOperation,
   ApiParam,
   ApiQuery,
@@ -200,9 +201,7 @@ export class UsersController {
   }
 
   @Post()
-  @ApiOperation({
-    summary: 'Internal user creation',
-  })
+  @ApiExcludeEndpoint()
   public createUser(@Body() createUserDto: CreateUserDto) {
     return this.usersService.createUser(createUserDto);
   }
