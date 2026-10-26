@@ -30,6 +30,7 @@ import { UsersModule } from './users/users.module';
       useFactory: (configService: ConfigService) => ({
         uri: configService.get<string>('MONGODB_URI'),
         dbName: configService.get<string>('MONGODB_NAME', 'blog-app'),
+        serverSelectionTimeoutMS: 5000,
       }),
     }),
 
